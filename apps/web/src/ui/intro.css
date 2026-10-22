@@ -1,0 +1,237 @@
+.intro {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #100f0c;
+}
+
+.intro-scenery {
+    position: absolute;
+    inset: 0;
+    background: url('/art/landscape.webp') center / cover;
+    animation: intro-reveal 0.8s ease-out both;
+}
+
+.intro-scenery-radio {
+    filter: saturate(0.5) brightness(0.32);
+}
+
+.intro-scenery-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12cqh;
+    background: #18150f;
+}
+
+.intro-route {
+    flex: none;
+    width: min(86cqw, 97cqh, 880px);
+    aspect-ratio: 600 / 440;
+    transform: rotate(-2deg);
+}
+
+.intro-route svg {
+    height: 100%;
+}
+
+.intro-route .map-route {
+    stroke: #9b321d;
+    stroke-width: 7px;
+    stroke-dasharray: 800;
+    animation: intro-route-draw 4s linear both;
+}
+
+.intro-waypoint {
+    font-size: 18px;
+    fill: #2c2519;
+    paint-order: stroke fill;
+    stroke: #d4ba85;
+    stroke-width: 0.6px;
+}
+
+.intro-map-signal {
+    fill: none;
+    stroke: #a8331d;
+    stroke-width: 3px;
+    animation: intro-signal 1.2s ease-out infinite;
+}
+
+.intro-map-stamp {
+    position: absolute;
+    right: 7%;
+    top: 9%;
+    border: 3px solid #8d3424;
+    color: #8d3424;
+    padding: 4px 10px;
+    rotate: -12deg;
+    font-size: clamp(14px, 2.4cqw, 36px);
+}
+
+.intro-scenery-garage {
+    background-image: url('/art/garage.webp');
+}
+
+.intro-garage-layout {
+    position: absolute;
+    inset: 0;
+}
+
+.intro-garage-layout .garage-vehicle {
+    animation: intro-ignition 1.8s ease-out;
+}
+
+.intro-garage-rack {
+    pointer-events: none;
+}
+
+.intro-vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 50% 40%, transparent 15%, #080704bb 95%),
+        linear-gradient(transparent 45%, #080704e8);
+}
+
+.intro-toolbar {
+    position: absolute;
+    inset: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 3;
+}
+
+.intro-toolbar .game-button,
+.sound-button {
+    font-size: clamp(12px, 1.4cqw, 20px);
+    min-height: 44px;
+    padding: 6px 14px;
+}
+
+.intro-title {
+    position: absolute;
+    inset: 25% 8% auto;
+    text-align: center;
+}
+
+.intro-title h1 {
+    margin: 15px 0 18px;
+    font-size: clamp(28px, 6cqw, 90px);
+}
+
+.intro-title p {
+    color: #c6b38b;
+    font: clamp(14px, 1.6cqw, 23px) / 1.5 Arial, sans-serif;
+}
+
+.intro-title > span,
+.intro-caption > span {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: clamp(10px, 1.1cqw, 16px);
+    color: #c99c5c;
+}
+
+.intro-caption {
+    position: absolute;
+    bottom: 7%;
+    inset-inline: 8%;
+    min-height: 17cqh;
+    text-align: center;
+    text-shadow: 0 3px 4px #000;
+}
+
+.intro-caption p {
+    margin-top: 14px;
+    font-size: clamp(20px, 3.2cqw, 48px);
+    line-height: 1.3;
+    animation: intro-reveal 0.4s ease-out both;
+}
+
+.intro-action {
+    position: absolute;
+    bottom: 12%;
+    inset-inline: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-action .game-button {
+    min-height: 48px;
+    min-width: 180px;
+    padding: 10px 24px;
+    font-size: clamp(18px, 2.2cqw, 32px);
+}
+
+.intro[data-paused='true'] .intro-action {
+    bottom: 3%;
+}
+
+.intro[data-paused='true'] *,
+.intro[data-paused='true'] *::before {
+    animation-play-state: paused;
+}
+
+.intro-transmission {
+    position: absolute;
+    left: 8%;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(24px, 5cqw, 65px);
+    color: #dfa04b;
+}
+
+.intro-transmission span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #d53c20;
+    box-shadow: 0 0 25px #d53c20;
+    animation: intro-signal 1s infinite;
+}
+
+.feedback-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pause-card .feedback-settings .game-button {
+    flex: 1 1 0;
+    min-height: 44px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.garage-tools {
+    position: absolute;
+    left: 2%;
+    top: 3%;
+    display: flex;
+    gap: 8px;
+    z-index: 4;
+}
+
+.garage-tools .game-button {
+    min-height: 44px;
+    padding: 6px 12px;
+    font-size: clamp(11px, 1.2cqw, 18px);
+}
+
+
+.intro-vignette,
+.intro-toolbar,
+.intro-caption {
+    transition: opacity 0.6s ease-out;
+}
+
+.intro[data-ending='true'] .intro-vignette,
+.intro[data-ending='true'] .intro-toolbar,
+.intro[data-ending='true'] .intro-caption {
+    opacity: 0;
+}

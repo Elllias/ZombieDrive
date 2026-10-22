@@ -1,0 +1,214 @@
+.upgrade-description {
+    color: #d2c39c;
+    font:
+        15px/1.5 Arial,
+        sans-serif;
+    margin: 14px 0 20px;
+}
+
+.upgrade-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.upgrade-tiers-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.upgrade-tier {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px 18px;
+    border: 3px solid #211a10;
+    border-radius: 20px;
+    color: #e6d5a5;
+    background: url('/art/grime.svg'), #3c3020;
+    box-shadow: inset 0 0 0 2px #a5702c;
+    overflow: hidden;
+    min-height: 290px;
+    text-shadow: 1px 2px #21190f;
+}
+
+.upgrade-tier.installed {
+    background-color: #806343;
+    box-shadow: inset 0 0 0 3px #ff981e;
+}
+
+.upgrade-tier:enabled:hover {
+    background-color: #615039;
+    box-shadow: inset 0 0 0 3px #ffae35;
+}
+
+.tier-status {
+    display: grid;
+    place-items: center;
+    min-height: 48px;
+    width: calc(100% + 24px);
+    background: #241c11aa;
+    color: #e98d2e;
+    font-size: 16px;
+    padding: 6px 8px;
+}
+
+.installed .tier-status {
+    background: #ff9f25;
+    color: #32250e;
+    text-shadow: none;
+}
+
+.upgrade-tier .part-icon {
+    width: 100%;
+    margin-block: -5px -20px;
+}
+
+.tier-lock {
+    position: absolute;
+    top: 85px;
+    width: 55px;
+    height: 68px;
+    color: #b8aa7c;
+    text-shadow: 2px 3px #16160e;
+}
+
+.part-icon.absent-part {
+    display: grid;
+    place-items: center;
+    background: none;
+    color: #9b8766;
+    font-size: 64px;
+}
+
+.tier-price {
+    position: relative;
+    z-index: 1;
+    color: #f53f22;
+    font-size: 24px;
+    margin-top: auto;
+    min-height: 28px;
+}
+
+.installed .tier-price {
+    font-size: 15px;
+    color: #e5d6a5;
+}
+
+.tier-level {
+    font-size: 19px;
+    margin: 16px 0 9px;
+}
+
+.upgrade-tier .level-track {
+    width: 90%;
+}
+
+.dialog-ok {
+    display: block;
+    margin: 22px auto 0;
+    font-size: 22px;
+    min-width: 180px;
+}
+
+@media (orientation: portrait) {
+    .upgrade-tiers {
+        gap: 6px;
+    }
+
+    .upgrade-tier {
+        padding: 0 5px 12px;
+        border-radius: 12px;
+        min-height: 240px;
+    }
+
+    .tier-status {
+        font-size: 11px;
+        min-height: 50px;
+        width: calc(100% + 10px);
+        padding-inline: 2px;
+    }
+
+    .upgrade-tier .part-icon {
+        width: 130%;
+        margin-bottom: -10px;
+    }
+
+    .tier-lock {
+        top: 80px;
+        width: 36px;
+        height: 45px;
+    }
+
+    .tier-price {
+        font-size: clamp(14px, 4cqw, 20px);
+    }
+
+    .tier-level {
+        font-size: 14px;
+    }
+
+    .upgrade-tier .level-track {
+        width: 100%;
+        gap: 2px;
+        padding: 3px;
+    }
+
+    .level-track > span {
+        height: 15px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .upgrade-description {
+        margin: 7px 0 13px;
+        font-size: 13px;
+    }
+
+    .upgrade-tier {
+        min-height: 0;
+        height: 190px;
+        padding-bottom: 8px;
+    }
+
+    .tier-status {
+        min-height: 34px;
+        font-size: 13px;
+    }
+
+    .upgrade-tier .part-icon {
+        width: 88px;
+        margin-block: -6px -8px;
+        flex-shrink: 0;
+    }
+
+    .tier-lock {
+        top: 50px;
+        width: 38px;
+        height: 47px;
+    }
+
+    .tier-price {
+        font-size: 18px;
+        min-height: 22px;
+    }
+
+    .tier-level {
+        font-size: 14px;
+        margin: 3px 0;
+    }
+
+    .upgrade-tier .level-track {
+        padding: 2px 6px;
+        border-width: 2px;
+    }
+
+    .upgrade-tier .level-track > span {
+        height: 12px;
+    }
+
+    .dialog-ok {
+        margin-top: 12px;
+        font-size: 18px;
+    }
+}

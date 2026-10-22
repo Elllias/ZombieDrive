@@ -1,0 +1,45 @@
+.truck-garage .garage-vehicle {
+    width: 70%;
+    bottom: 2%;
+}
+
+.truck-garage .upgrade-rack,
+.r8-garage .upgrade-rack {
+    grid-template-columns: repeat(5, 1fr);
+    padding-inline: 5%;
+}
+
+.r8-garage .garage-vehicle {
+    width: 68%;
+    bottom: 2%;
+}
+
+.vehicle-plow {
+    position: absolute;
+    z-index: 4;
+}
+
+.part-icon.part-plow {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+    .truck-garage .garage-vehicle {
+        width: 88%;
+        bottom: 12%;
+    }
+
+    .r8-garage .garage-vehicle {
+        width: 88%;
+        bottom: 12%;
+    }
+
+    .truck-garage .upgrade-rack,
+    .r8-garage .upgrade-rack {
+        grid-template-columns: repeat(3, 1fr);
+        padding-inline: 10px;
+        gap: 14px 8px;
+    }
+}

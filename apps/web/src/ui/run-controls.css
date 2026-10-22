@@ -1,0 +1,155 @@
+.run-controls {
+    position: absolute;
+    inset-inline: max(16px, env(safe-area-inset-left));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.tilt-controls,
+.drive-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.pedal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: url('/art/grime.svg'), linear-gradient(135deg, #706047ee, #3e3528ee);
+    border: 3px solid #211a11;
+    box-shadow:
+        inset 0 0 0 2px #a0895c,
+        inset 0 0 0 5px #51422b,
+        0 3px 0 #16110b;
+    color: #dcc795;
+    border-radius: 8px;
+    width: clamp(90px, 11cqw, 150px);
+    height: clamp(66px, 8cqw, 100px);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    text-shadow: 1px 2px #281e10;
+}
+
+.pedal strong {
+    font-size: clamp(16px, 2cqw, 28px);
+    font-weight: 400;
+}
+
+.pedal small {
+    font:
+        11px Arial,
+        sans-serif;
+    color: #d1bb8e;
+}
+
+.pedal.gas {
+    background: url('/art/grime.svg'), linear-gradient(#b28440, #785025);
+    box-shadow:
+        inset 0 0 0 2px #d6a55c,
+        inset 0 0 0 5px #72471c,
+        0 3px 0 #16110b;
+}
+
+.pedal.tiltLeft,
+.pedal.tiltRight {
+    width: clamp(56px, 8cqw, 96px);
+    height: clamp(54px, 7cqw, 80px);
+}
+
+.pedal.tiltLeft strong,
+.pedal.tiltRight strong {
+    font-size: 30px;
+}
+
+.pedal:active {
+    filter: brightness(1.3);
+}
+
+@media (max-height: 450px) {
+    .run-hud {
+        top: max(8px, env(safe-area-inset-top));
+        gap: 18px;
+    }
+
+    .hud-kills {
+        padding: 3px 12px;
+    }
+
+    .hud-kills small {
+        display: none;
+    }
+
+    .run-controls {
+        bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .pedal {
+        width: 85px;
+        height: 60px;
+    }
+
+    .pedal small {
+        font-size: 9px;
+    }
+
+    .dashboard {
+        bottom: -10px;
+    }
+
+    .gauge {
+        width: 116px;
+    }
+
+    .gauge-fuel {
+        width: 90px;
+    }
+}
+
+@media (orientation: portrait) {
+    .run-hud {
+        gap: 8px;
+    }
+
+    .hud-kills small {
+        display: none;
+    }
+
+    .hud-route {
+        min-width: 0;
+    }
+
+    .dashboard {
+        display: none;
+    }
+
+    .run-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .gauge {
+        width: 90px;
+    }
+
+    .gauge-fuel {
+        width: 70px;
+        margin-right: -12px;
+    }
+}
+
+.tilt-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    stroke: #dfc994;
+    fill: none;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

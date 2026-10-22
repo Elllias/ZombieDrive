@@ -1,0 +1,161 @@
+.run-screen {
+    background: #352c1d;
+}
+
+.game-viewport {
+    position: absolute;
+    inset: 0;
+}
+
+.game-viewport canvas {
+    display: block;
+}
+
+.run-hud {
+    position: absolute;
+    top: max(12px, env(safe-area-inset-top));
+    left: max(16px, env(safe-area-inset-left));
+    right: max(16px, env(safe-area-inset-right));
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.hud-kills {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 15px;
+    border-width: 3px;
+}
+
+.hud-kills::before {
+    display: none;
+}
+
+.hud-kills > span {
+    font-size: 28px;
+}
+
+.hud-kills strong {
+    font-size: 26px;
+    color: #f49834;
+    text-shadow: 1px 2px #241b10;
+}
+
+.hud-kills small {
+    font-size: 9px;
+    color: #d3c198;
+}
+
+.hud-route {
+    flex: 1;
+    padding: 14px 4px;
+    text-align: center;
+    color: #e5d5ad;
+    text-shadow: 1px 1px #292315;
+}
+
+.hud-route progress {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #e0cf9e55;
+}
+
+.hud-route progress::-webkit-progress-bar {
+    background: #e0cf9e55;
+}
+
+.hud-route span {
+    display: block;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.pause-button {
+    min-height: 44px;
+    width: 55px;
+    padding: 1px;
+    font-size: 28px;
+}
+
+.dashboard {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+    filter: drop-shadow(2px 3px 1px #141009);
+}
+
+.gauge {
+    width: clamp(90px, 13cqw, 180px);
+}
+
+.gauge svg {
+    width: 100%;
+    display: block;
+}
+
+.gauge-fuel {
+    width: clamp(70px, 10cqw, 138px);
+    margin-right: -16px;
+    z-index: -1;
+}
+
+.dial-rim {
+    fill: #685137;
+    stroke: #201b13;
+    stroke-width: 5px;
+}
+
+.dial-face {
+    fill: #29251c;
+    stroke: #a78e64;
+    stroke-width: 2px;
+}
+
+.dial-tick {
+    stroke: #d9c38b;
+    stroke-width: 2px;
+}
+
+.dial-number {
+    fill: #dac997;
+    font:
+        10px 'Russo One',
+        sans-serif;
+    text-anchor: middle;
+}
+
+.dial-unit {
+    fill: #c8b786;
+    font:
+        8px 'Russo One',
+        sans-serif;
+    text-anchor: middle;
+}
+
+.dial-needle {
+    fill: #e27e26;
+    stroke: #4f2d13;
+    stroke-width: 1px;
+}
+
+.dial-center {
+    fill: #4b4a36;
+    stroke: #13140e;
+    stroke-width: 2px;
+}
+
+.dial-value {
+    fill: #dcc897;
+    font:
+        14px 'Russo One',
+        sans-serif;
+    text-anchor: middle;
+}

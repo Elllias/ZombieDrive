@@ -1,0 +1,178 @@
+.map-dialog {
+    background-color: #b29b71;
+    background-image: url('/art/grime.svg');
+    color: #2a251a;
+    width: min(950px, 94vw);
+}
+
+.map-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.paper-map {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    background:
+        repeating-linear-gradient(90deg, transparent 0 19%, #7f70503b 19.1% 19.4%, transparent 19.5% 20%),
+        repeating-linear-gradient(0deg, transparent 0 19%, #7f70503b 19.1% 19.4%, transparent 19.5% 20%),
+        url('/art/grime.svg'), #cab28a;
+    border: 3px solid #4c412e;
+    box-shadow: inset 0 0 30px #6d513745;
+}
+
+.paper-map svg {
+    width: 100%;
+    display: block;
+}
+
+.map-water {
+    fill: #839497;
+    stroke: #504e3c;
+    stroke-width: 4px;
+}
+
+.map-river {
+    fill: none;
+    stroke: #6f9290;
+    stroke-width: 3px;
+}
+
+.map-roads {
+    fill: none;
+    stroke: #a44731;
+    stroke-width: 3px;
+}
+
+.map-route {
+    fill: none;
+    stroke: #5e523b;
+    stroke-width: 5px;
+    stroke-dasharray: 12 9;
+}
+
+.map-node {
+    fill: #ead7a5;
+    stroke: #25231a;
+    stroke-width: 4px;
+}
+
+.map-dot {
+    fill: #ffa81f;
+    stroke: #25231a;
+    stroke-width: 2px;
+}
+
+.map-postcard {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    justify-content: center;
+}
+
+.map-postcard img {
+    width: 100%;
+    border: 4px solid #342d1e;
+    box-shadow: 3px 4px #786141;
+}
+
+.map-postcard h3 {
+    font-size: 22px;
+}
+
+.map-postcard p {
+    font:
+        16px/1.4 Arial,
+        sans-serif;
+}
+
+.map-postcard .game-button {
+    font-size: 22px;
+}
+
+@media (orientation: portrait) {
+    .map-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .paper-map {
+        max-width: 396px;
+    }
+
+    .map-dialog {
+        padding-inline: 10px;
+    }
+
+    .map-postcard img {
+        display: none;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .map-content {
+        margin-top: 12px;
+        gap: 18px;
+    }
+
+    .paper-map {
+        max-width: 348px;
+    }
+
+    .map-postcard {
+        gap: 10px;
+    }
+
+    .map-postcard img {
+        max-height: 100px;
+        object-fit: cover;
+    }
+
+    .map-postcard h3 {
+        font-size: 18px;
+    }
+
+    .map-postcard p {
+        font-size: 13px;
+    }
+
+    .map-postcard .game-button {
+        font-size: 18px;
+    }
+}
+
+.map-stage-node {
+    position: absolute;
+    padding: 8px 12px;
+    color: #312a1b;
+    background: #bf9b61db;
+    border: 2px solid #4c3922;
+    font-size: clamp(12px, 1.4cqw, 19px);
+    min-height: 44px;
+    width: 32%;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 3px 0 #3e2f1c66;
+}
+
+.map-stage-node.selected {
+    background: #e9b650;
+    border-color: #5c2d0d;
+}
+
+.map-stage-node:active:not(:disabled) {
+    translate: 0 0;
+    filter: brightness(1.1);
+}
+
+@media (orientation: portrait) {
+    .map-stage-node {
+        font-size: 11px;
+        padding: 5px 2px;
+    }
+}

@@ -1,0 +1,95 @@
+#root:has(.garage, .run-screen, .intro, .ending) {
+    height: 100dvh;
+    overflow: clip;
+}
+
+#root:has(.garage) {
+    background: url('/art/garage.webp') center / cover;
+}
+
+.game-shell.garage,
+.game-shell.run-screen,
+.game-shell.intro,
+.game-shell.ending {
+    background: transparent;
+    box-shadow: none;
+}
+
+.game-shell.garage,
+.game-shell.run-screen,
+.game-shell.intro,
+.game-shell.ending {
+    overflow: visible;
+}
+
+.garage-toolbar,
+.garage > .upgrade-rack {
+    position: relative;
+    isolation: isolate;
+    background: none;
+}
+
+.garage-toolbar::before,
+.garage > .upgrade-rack::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    translate: -50% 0;
+    background-image: url('/art/grime.svg');
+    pointer-events: none;
+    z-index: -1;
+}
+
+.garage-toolbar::before {
+    top: min(0px, calc((56.25vw - 100dvh) / 2));
+    bottom: -4px;
+    border-bottom: inherit;
+    background-color: #312b1fe8;
+}
+
+.garage > .upgrade-rack::before {
+    top: -4px;
+    bottom: min(0px, calc((56.25vw - 100dvh) / 2));
+    border-top: inherit;
+    background-color: #30291fe6;
+}
+
+.run-screen .game-viewport,
+.intro-scenery::before,
+.intro .intro-vignette,
+.ending .ending-shade {
+    position: absolute;
+    inset: auto;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100dvh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.intro .intro-scenery {
+    background: none;
+}
+
+.intro-scenery::before {
+    content: '';
+    z-index: -1;
+    background: url('/art/landscape.webp') center / cover;
+}
+
+.intro-scenery-garage::before {
+    background-image: url('/art/garage.webp');
+}
+
+.intro-scenery-map::before {
+    background: #18150f;
+}
+
+.ending .ending-stage {
+    left: 50%;
+    width: max(100vw, 177.7778dvh);
+    height: max(100dvh, 56.25vw);
+    translate: -50% -50%;
+}

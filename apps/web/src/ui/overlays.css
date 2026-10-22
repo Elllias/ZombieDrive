@@ -1,0 +1,206 @@
+.game-overlay {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    color: var(--text);
+    background: #100c078a;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    place-items: safe center;
+    padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+        max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+    overflow: auto;
+}
+
+.game-overlay:not([open]) {
+    display: none;
+}
+
+.game-overlay::backdrop {
+    background: transparent;
+}
+
+.pause-card,
+.interrupted-panel {
+    width: min(390px, 100%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+
+.pause-card h2,
+.interrupted-panel h2 {
+    font-size: 35px;
+}
+
+.pause-card .game-button,
+.interrupted-panel .game-button {
+    font-size: 18px;
+}
+
+.portrait-hint {
+    display: none;
+    font:
+        16px/1.5 Arial,
+        sans-serif;
+}
+
+.controls-hint {
+    font:
+        14px/1.7 Arial,
+        sans-serif;
+    color: #d2c099;
+}
+
+.result-card {
+    width: min(430px, 100%);
+    padding: 32px;
+    text-align: center;
+}
+
+.result-card h1 {
+    font-size: clamp(22px, 3.5vw, 38px);
+}
+
+.result-reason {
+    font:
+        14px/1.5 Arial,
+        sans-serif;
+    color: #d3c5a3;
+    margin: 8px 0 20px;
+}
+
+.result-progress {
+    width: 100%;
+    height: 24px;
+    border: 2px solid #d48b45;
+    margin-bottom: 22px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    font-size: clamp(16px, 2.6vw, 24px);
+    text-shadow: 1px 2px #281f13;
+}
+
+.result-row strong {
+    margin-inline-start: auto;
+}
+
+.result-total {
+    border-top: 2px solid #3f3322;
+    padding-top: 22px;
+    margin-top: 24px;
+}
+
+.result-total strong {
+    color: #ef3b1d;
+    font-size: 1.15em;
+}
+
+.result-actions p {
+    font:
+        13px/1.5 Arial,
+        sans-serif;
+    color: #c7b995;
+    margin-bottom: 14px;
+}
+
+.result-actions .game-button {
+    width: 100%;
+    font-size: 24px;
+}
+
+.result-actions .error {
+    color: var(--danger);
+}
+
+.result-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.result-buttons .game-button {
+    flex: 1;
+    min-width: 0;
+}
+
+.result-buttons .game-button:not(:only-child) {
+    font-size: 16px;
+}
+
+@media (orientation: portrait) {
+    .result-buttons {
+        flex-direction: column;
+    }
+
+    .portrait-hint {
+        display: block;
+    }
+
+    .resume-button {
+        display: none;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .game-overlay {
+        padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+            max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    }
+
+    .pause-card {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .result-card {
+        padding: 12px 24px;
+        width: min(460px, 100%);
+    }
+
+    .result-card h1 {
+        font-size: 24px;
+    }
+
+    .result-reason {
+        margin: 3px 0 8px;
+    }
+
+    .result-progress {
+        height: 14px;
+        margin-bottom: 8px;
+    }
+
+    .result-row {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .result-total {
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+
+    .result-actions p {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .result-actions .game-button {
+        min-height: 44px;
+        font-size: 18px;
+    }
+}

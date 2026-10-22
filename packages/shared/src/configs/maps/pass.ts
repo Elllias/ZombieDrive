@@ -1,0 +1,48 @@
+import type { TrackConfig } from '../../trackTypes';
+
+export const PASS_TRACK: TrackConfig = {
+    length: 2400,
+    sampleSpacing: 1,
+    groundFriction: 0.85,
+    looseGroundFriction: 0.07,
+    floorY: 7,
+    zombieSectionLength: 400,
+    zombiePositions: [],
+
+    looseSections: [
+        { start: 460, end: 486 }, { start: 686, end: 712 },
+        { start: 1050, end: 1104 }, { start: 1284, end: 1332 },
+        { start: 2030, end: 2056 }, { start: 2234, end: 2260 },
+    ],
+
+    heightProfile: [
+        { x: 0, height: 0 }, { x: 45, height: 0 },
+        { x: 78, height: -3 }, { x: 108, height: -3 }, { x: 142, height: 1 },
+        { x: 174, height: 1 }, { x: 207, height: -4 }, { x: 240, height: -4 },
+        { x: 273, height: 2 }, { x: 306, height: 2 }, { x: 340, height: 0 },
+        { x: 366, height: 0 }, { x: 381, height: -2 }, { x: 397, height: 0 },
+        { x: 413, height: -2 }, { x: 429, height: 0 }, { x: 448, height: 0 },
+        { x: 468, height: -5 }, { x: 495, height: -7 }, { x: 532, height: -7 },
+        { x: 570, height: 1 }, { x: 602, height: 1 }, { x: 627, height: 5 },
+        { x: 649, height: 5 }, { x: 673, height: 0 }, { x: 694, height: -5 },
+        { x: 722, height: -7 }, { x: 758, height: -7 }, { x: 798, height: 1 },
+        { x: 842, height: 1 }, { x: 875, height: 7 }, { x: 896, height: 7 },
+        { x: 930, height: 12 }, { x: 962, height: 12 }, { x: 1000, height: 6 },
+        { x: 1028, height: 6 }, { x: 1050, height: 3 }, { x: 1076, height: -3 },
+        { x: 1104, height: -5 }, { x: 1138, height: -5 }, { x: 1172, height: 7 },
+        { x: 1194, height: 7 }, { x: 1228, height: 12 }, { x: 1262, height: 12 },
+        { x: 1284, height: 6 }, { x: 1304, height: 0 }, { x: 1332, height: -3 },
+        { x: 1376, height: -3 }, { x: 1408, height: 2 }, { x: 1448, height: 2 },
+        { x: 1480, height: 6 }, { x: 1516, height: 6 }, { x: 1548, height: 0 },
+        { x: 1582, height: 0 }, { x: 1596, height: -2 }, { x: 1610, height: 0 },
+        { x: 1624, height: -2 }, { x: 1638, height: 0 }, { x: 1670, height: 0 },
+        { x: 1702, height: -6 }, { x: 1734, height: -6 }, { x: 1768, height: 3 },
+        { x: 1800, height: 3 }, { x: 1830, height: -3 }, { x: 1868, height: -3 },
+        { x: 1902, height: 3 }, { x: 1934, height: 3 }, { x: 1966, height: 10 },
+        { x: 1990, height: 10 }, { x: 2012, height: 5 }, { x: 2044, height: -2 },
+        { x: 2070, height: -4 }, { x: 2100, height: -4 }, { x: 2134, height: 4 },
+        { x: 2166, height: 4 }, { x: 2194, height: 9 }, { x: 2212, height: 9 },
+        { x: 2228, height: 4 }, { x: 2246, height: 0 }, { x: 2274, height: -3 },
+        { x: 2306, height: -3 }, { x: 2336, height: 0 }, { x: 2440, height: 0 },
+    ],
+};

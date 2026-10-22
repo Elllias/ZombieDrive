@@ -1,0 +1,47 @@
+import type { TrackConfig } from '../../trackTypes';
+
+export const INDUSTRIAL_TRACK: TrackConfig = {
+    length: 2100,
+    sampleSpacing: 1,
+    groundFriction: 0.85,
+    looseGroundFriction: 0.18,
+    floorY: 7,
+    zombieSectionLength: 300,
+    zombiePositions: [ 22, 48, 82, 120, 148, 184, 210, 246, 276 ],
+
+    looseSections: [
+        { start: 208, end: 236 }, { start: 536, end: 562 }, { start: 930, end: 955 },
+        { start: 1370, end: 1400 }, { start: 1780, end: 1806 },
+    ],
+
+    heightProfile: [
+        { x: 0, height: 0 }, { x: 44, height: 0 }, { x: 70, height: -3 },
+        { x: 100, height: -3 }, { x: 125, height: 2 }, { x: 154, height: 2 },
+        { x: 180, height: 7 }, { x: 194, height: 7 }, { x: 205, height: 6 },
+        { x: 218, height: 2 }, { x: 238, height: -4 }, { x: 272, height: -4 },
+        { x: 308, height: 1 }, { x: 335, height: 1 }, { x: 365, height: -5 },
+        { x: 402, height: -5 }, { x: 424, height: -1 }, { x: 446, height: -1 },
+        { x: 470, height: 6 }, { x: 488, height: 6 }, { x: 503, height: 5 },
+        { x: 521, height: 1 }, { x: 548, height: -6 }, { x: 580, height: -6 },
+        { x: 614, height: 0 }, { x: 640, height: 0 }, { x: 658, height: -2 },
+        { x: 674, height: 0 }, { x: 690, height: -2 }, { x: 708, height: 0 },
+        { x: 740, height: 0 }, { x: 768, height: -5 }, { x: 804, height: -5 },
+        { x: 838, height: 3 }, { x: 864, height: 3 }, { x: 895, height: 9 },
+        { x: 910, height: 9 }, { x: 925, height: 7 }, { x: 940, height: 3 },
+        { x: 963, height: -4 }, { x: 995, height: -4 }, { x: 1030, height: 0 },
+        { x: 1050, height: 0 }, { x: 1074, height: -4 }, { x: 1100, height: -4 },
+        { x: 1130, height: 2 }, { x: 1160, height: 2 }, { x: 1195, height: -6 },
+        { x: 1230, height: -6 }, { x: 1270, height: 0 }, { x: 1300, height: 0 },
+        { x: 1330, height: 8 }, { x: 1348, height: 8 }, { x: 1362, height: 6 },
+        { x: 1382, height: 1 }, { x: 1406, height: -6 }, { x: 1440, height: -6 },
+        { x: 1470, height: 0 }, { x: 1490, height: 0 }, { x: 1504, height: -2 },
+        { x: 1518, height: 0 }, { x: 1532, height: -2 }, { x: 1548, height: 0 },
+        { x: 1580, height: 0 }, { x: 1610, height: -5 }, { x: 1645, height: -5 },
+        { x: 1680, height: 2 }, { x: 1710, height: 2 }, { x: 1745, height: 8 },
+        { x: 1760, height: 8 }, { x: 1775, height: 6 }, { x: 1790, height: 2 },
+        { x: 1815, height: -5 }, { x: 1850, height: -5 }, { x: 1888, height: 0 },
+        { x: 1920, height: 0 }, { x: 1950, height: -4 }, { x: 1978, height: -4 },
+        { x: 2010, height: 1 }, { x: 2040, height: 1 }, { x: 2075, height: 0 },
+        { x: 2134, height: 0 },
+    ],
+};

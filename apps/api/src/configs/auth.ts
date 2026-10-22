@@ -1,0 +1,6 @@
+export const SESSION_DAYS = 30;
+export const SESSION_COOKIE = 'zombie_session';
+export const SESSION_MAX_AGE = SESSION_DAYS * 86400;
+export const TELEGRAM_AUTH_MAX_AGE_SECONDS = 3600;
+export const TELEGRAM_CLOCK_TOLERANCE_SECONDS = 30;
+export const TELEGRAM_LOCK_NAMESPACE = 845307113;

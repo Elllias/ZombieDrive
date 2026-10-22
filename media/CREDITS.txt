@@ -1,0 +1,48 @@
+Zombie Drive — gameplay trailer
+
+Captured from the local game build. Gameplay uses the existing physics, rendering,
+vehicles and stage configurations; no production accounts or database are used.
+
+Music and effects are from the game audio catalog. Sources and licenses:
+
+Zombie Drive — audio sources (CC0 1.0)
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Acquired 2026-10-21. Files are hosted locally with the game.
+
+starter.mp3: prometheus888, CarEngine.wav (excerpt, mono, normalized, fade, MP3).
+https://freesound.org/people/prometheus888/sounds/458461/
+
+engine-truck.wav: cognito perceptu, idling diesel loop.wav (mono, EQ, gain, seam crossfade).
+https://freesound.org/people/cognito%20perceptu/sounds/21187/
+
+engine-suv.wav, engine-r8.wav: domasx2, racing car engine sound loops, loop_0.wav.
+Mono, fixed-RPM resynthesis from an averaged combustion cycle; circular EQ and periodic resampling.
+The source recording's pitch drift is removed; playback rate in the game controls RPM.
+R8 is a pitched and filtered variant, not a recording of an Audi.
+https://opengameart.org/content/racing-car-engine-sound-loops
+
+wood.mp3, metal.mp3, hit.mp3: Kenney, Impact Sounds.
+Originals: impactWood_heavy_000.ogg, impactMetal_heavy_000.ogg, impactPunch_heavy_000.ogg.
+https://kenney.nl/assets/impact-sounds
+
+click.mp3, purchase.mp3: Kenney, Interface Sounds.
+Originals: click_001.ogg, confirmation_002.ogg.
+https://kenney.nl/assets/interface-sounds
+
+groan-1.mp3, groan-2.mp3: ianzazz, Zombie noises and moans.
+Originals: zombienoise2.ogg and zombienoise3.ogg (trimmed, mono, normalized, MP3).
+https://opengameart.org/content/zombie-noises-and-moans
+
+explosion.mp3: Joth, Chunky Explosion (trimmed, normalized, mono, MP3).
+https://opengameart.org/content/chunky-explosion
+
+radio.wav, wind.wav: original procedural noise made for this project; CC0 1.0.
+Radio dialogue is subtitled; no speech recording is included.
+Peak-normalized one-shots; engine loops have matched RMS. The truck retains its original seam crossfade.
+Sound effects: mono 22050 Hz; engine/noise loops PCM WAV, one-shots MP3 64 kbit/s.
+Conversion tool: FFmpeg 7.1 (temporary tool, not a game dependency).
+
+menu-rock.mp3: Umplix — Rock Theme 3 (loop version), CC0 1.0.
+https://opengameart.org/content/rock-theme-3
+Original: rock_theme_3_loop_.wav; normalized, stereo 32000 Hz, MP3 96 kbit/s.
+engine-stall.mp3: short decelerating/sputtering edit of the domasx2 engine loop credited above; CC0.

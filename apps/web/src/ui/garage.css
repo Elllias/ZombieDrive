@@ -1,0 +1,195 @@
+.garage {
+    display: grid;
+    grid-template-rows: minmax(64px, 12%) minmax(0, 1fr) 25%;
+    background: url('/art/garage.webp') center / cover;
+}
+
+.garage-scene {
+    position: relative;
+    min-height: 0;
+}
+
+.garage-sign {
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    text-align: center;
+    color: #e6ba68;
+    font-size: clamp(9px, 1.25cqw, 20px);
+    padding: 8px 12px;
+    border: 2px solid #302316;
+    background: url('/art/grime.svg'), #342a1edb;
+    box-shadow: 0 3px 0 #17120e;
+    transform: rotate(2deg);
+}
+
+.garage-sign span {
+    display: block;
+    color: #b2a287;
+    font-size: 0.65em;
+    letter-spacing: 0.13em;
+    margin-top: 5px;
+}
+
+.garage-vehicle {
+    position: absolute;
+    width: 58%;
+    left: 50%;
+    bottom: -2%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 12px 4px #17130d88);
+}
+
+.garage-record {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    font-size: clamp(10px, 1.25cqw, 20px);
+    text-shadow: 1px 2px #15130c;
+    color: #d5c498;
+}
+
+.upgrade-rack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    padding: 1.3% 8% 0.9%;
+    background: url('/art/grime.svg'), #30291fe6;
+    border-top: 4px solid #17150f;
+}
+
+.upgrade-card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 0;
+    justify-items: center;
+    background: url('/art/grime.svg'), radial-gradient(ellipse, #726044, #423b2e);
+    border: 4px solid #19170f;
+    border-radius: 8px;
+    padding: 7% 10% 0;
+    box-shadow:
+        inset 0 0 0 2px #8e7853,
+        inset 0 0 17px #201c17;
+}
+
+.upgrade-card:hover {
+    background-color: #8d6940;
+    filter: brightness(1.15);
+}
+
+.upgrade-card .part-icon {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+    top: -6%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+}
+
+.upgrade-price {
+    position: absolute;
+    top: -12%;
+    left: 5%;
+    right: 5%;
+    padding: 3px 4px;
+    background: url('/art/grime.svg'), #8e8056;
+    border: 3px solid #1c190f;
+    border-radius: 5px;
+    font-size: clamp(10px, 1.75cqw, 28px);
+    line-height: 1.05;
+    text-shadow: 1px 1px #191609;
+    z-index: 2;
+}
+
+.upgrade-price.upgrade-price-plow {
+    font-size: clamp(11px, 1.5cqw, 22px);
+}
+
+.upgrade-card .level-track {
+    grid-row: 2;
+    width: 105%;
+    transform: translateY(20%);
+    z-index: 2;
+}
+
+.upgrade-card .level-track > span {
+    height: clamp(10px, 1.7cqw, 25px);
+}
+
+.garage-notice {
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #241911ee;
+    padding: 12px;
+    border: 2px solid #8a6446;
+    width: min(90%, 560px);
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .garage {
+        grid-template-rows: calc(64px + env(safe-area-inset-top)) 1fr 32%;
+        background-color: #211b12;
+        background-size: auto 88%;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .garage-vehicle {
+        width: 98%;
+        bottom: 12%;
+    }
+
+    .garage-sign {
+        font-size: 13px;
+        top: 10%;
+        right: 50%;
+        transform: translateX(50%) rotate(2deg);
+        white-space: nowrap;
+    }
+
+    .garage-record {
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    .upgrade-rack {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        padding: 18px 18px 16px;
+    }
+
+    .upgrade-card {
+        padding-top: 2%;
+    }
+
+    .upgrade-price {
+        font-size: clamp(11px, 3.5cqw, 15px);
+        top: -13px;
+    }
+
+    .upgrade-card .part-icon {
+        height: 100%;
+        top: -6%;
+    }
+
+    .upgrade-card .level-track > span {
+        height: 14px;
+    }
+}
+
+.upgrade-name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}

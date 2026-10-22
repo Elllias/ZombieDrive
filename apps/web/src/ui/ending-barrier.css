@@ -1,0 +1,42 @@
+.ending-barrier {
+    position: absolute;
+    left: 70.7%;
+    bottom: 28.7%;
+    width: 4.4%;
+    aspect-ratio: 196 / 376;
+    z-index: 4;
+    filter: drop-shadow(1px 2px 1px #17110c88);
+}
+
+.ending-barrier-shadow {
+    position: absolute;
+    bottom: 1%;
+    left: -20%;
+    width: 140%;
+    height: 4%;
+    border-radius: 50%;
+    background: #17110a88;
+    filter: blur(2px);
+}
+
+.ending-barrier-post {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.ending-barrier-arm {
+    position: absolute;
+    left: -233.44%;
+    top: 17.55%;
+    width: 320%;
+    max-width: none;
+    height: auto;
+    translate: 0 -49.2%;
+    rotate: var(--gate-angle);
+    /* Align the painted bearings in both sprites, keeping the hinge fixed while rotating. */
+    transform-origin: 94.2% 49.2%;
+    z-index: 1;
+}

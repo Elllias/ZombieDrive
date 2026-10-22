@@ -1,0 +1,93 @@
+.ending-complete .ending-shade {
+    background: linear-gradient(#14140dcc, #14140d55 42%, #14140de6);
+}
+
+.ending-victory {
+    position: absolute;
+    inset: 14% 6% auto;
+    text-align: center;
+    text-shadow: 0 3px 4px #141008;
+}
+
+.ending-victory h1 {
+    margin: 14px 0;
+    font-size: clamp(30px, 7.2cqw, 100px);
+    line-height: 1.05;
+    color: #f7d69a;
+}
+
+.ending-victory p {
+    font-size: clamp(15px, 2.4cqw, 32px);
+    line-height: 1.4;
+}
+
+.ending-thanks {
+    display: block;
+    margin-top: 12px;
+    color: #c2b391;
+    font: clamp(12px, 1.5cqw, 20px) / 1.5 Arial, sans-serif;
+}
+
+.ending-actions {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.ending-replay {
+    min-height: 44px;
+    border: 0;
+    padding: 6px 14px;
+    background: transparent;
+    color: #d3c096;
+    text-decoration: underline;
+    font-size: clamp(13px, 1.5cqw, 20px);
+}
+
+@media (orientation: portrait) {
+    .ending-caption {
+        bottom: 10%;
+        min-height: 16cqh;
+    }
+
+    .ending-caption p {
+        font-size: 5.5cqw;
+    }
+
+    .ending-title {
+        top: 18%;
+    }
+
+    .ending-title h1 {
+        font-size: 10cqw;
+    }
+
+    .ending-victory {
+        top: 24%;
+    }
+
+    .ending-victory h1 {
+        font-size: 11cqw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ending-car,
+    .ending-car-shadow {
+        left: 33%;
+    }
+
+    .ending-car .vehicle-wheel {
+        rotate: 0deg;
+    }
+
+    .ending-barrier-arm {
+        rotate: 85deg;
+    }
+
+    .ending-dust,
+    .ending-searchlight {
+        display: none;
+    }
+}

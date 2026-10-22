@@ -1,0 +1,78 @@
+.garage-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1.8fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(6px, 1.4cqw, 16px);
+    padding: 6px max(12px, env(safe-area-inset-right)) 8px max(12px, env(safe-area-inset-left));
+    background: url('/art/grime.svg'), #312b1fe8;
+    border-bottom: 4px solid #18160f;
+    z-index: 2;
+}
+
+.garage-toolbar > * {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.garage-toolbar h1 {
+    font-size: clamp(22px, 4cqw, 60px);
+    line-height: 1;
+    text-align: center;
+}
+
+.map-icon {
+    display: none;
+}
+
+.garage-toolbar .game-button {
+    width: 100%;
+    min-height: 44px;
+    height: 100%;
+    padding: 3px clamp(6px, 1.2cqw, 18px);
+    font-size: clamp(14px, 2.4cqw, 36px);
+    line-height: 1;
+}
+
+.garage-cash {
+    display: block;
+    width: 100%;
+    color: #e52a13;
+    font-size: clamp(24px, 4cqw, 60px);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .garage-toolbar {
+        grid-template-columns: 44px minmax(0, 1fr) clamp(88px, 24cqw, 128px);
+        gap: 8px;
+        padding: max(8px, env(safe-area-inset-top)) 10px 10px;
+    }
+
+    .garage-toolbar h1,
+    .map-label {
+        display: none;
+    }
+
+    .map-icon {
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+
+    .garage-toolbar .game-button {
+        font-size: 16px;
+        padding: 4px 6px;
+    }
+
+    .garage-toolbar .map-button {
+        padding: 5px;
+        min-width: 44px;
+    }
+
+    .garage-cash {
+        font-size: clamp(16px, 4.8cqw, 24px);
+    }
+}
